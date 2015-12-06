@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ShopMainWindow</class>
+ <widget class="QMainWindow" name="ShopMainWindow">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>928</width>
+    <height>619</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>928</width>
+    <height>619</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>销售管理系统</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>1</number>
+      </property>
+      <property name="sizeConstraint">
+       <enum>QLayout::SetFixedSize</enum>
+      </property>
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string>销售</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="text">
+         <string>入库</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="text">
+         <string>商品信息</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="text">
+         <string>查询</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_quit">
+        <property name="text">
+         <string>退出</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <family>宋体</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>3</number>
+      </property>
+      <widget class="QWidget" name="tab_goodsSell">
+       <attribute name="title">
+        <string>销售</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="4" column="0" colspan="6">
+         <widget class="QTableView" name="tableView_sellView"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>宋体</family>
+            <pointsize>12</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>请输入条码：</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="2">
+         <widget class="QPushButton" name="pushButton_10">
+          <property name="text">
+           <string>删除选中</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="5">
+         <widget class="QPushButton" name="pushButton_6">
+          <property name="text">
+           <string>结算</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="3">
+         <widget class="QPushButton" name="pushButton_7">
+          <property name="text">
+           <string>取消交易</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" colspan="3">
+         <widget class="QLineEdit" name="edit_input_sell_sn">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Courier</family>
+            <pointsize>12</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="maxLength">
+           <number>13</number>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="4">
+         <widget class="QPushButton" name="btn_onCredit">
+          <property name="text">
+           <string>赊账</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_goodsEntry">
+       <attribute name="title">
+        <string>入库</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="1" column="8">
+         <widget class="QLineEdit" name="lEdit_stock_subPrice"/>
+        </item>
+        <item row="5" column="4">
+         <widget class="QLineEdit" name="lEdit_stock_leftNumber1"/>
+        </item>
+        <item row="1" column="7">
+         <widget class="QLabel" name="label_21">
+          <property name="text">
+           <string>小件售价：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLabel" name="label_23">
+          <property name="text">
+           <string>大件入库数：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="2" colspan="10">
+         <widget class="QTextEdit" name="tEdit_remark">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>80</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QLabel" name="label_20">
+          <property name="text">
+           <string>备注：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="8">
+         <widget class="QLineEdit" name="lEdit_stock_supplier">
+          <property name="readOnly">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="4">
+         <widget class="QPushButton" name="btn_stock_reset">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>重置(Ctrl+R)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLabel" name="label_19">
+          <property name="text">
+           <string>大件进价:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLineEdit" name="lEdit_stock_purchasePrice"/>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLabel" name="label_18">
+          <property name="text">
+           <string>商品名称:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="8">
+         <widget class="QLineEdit" name="lEdit_stock_subSN">
+          <property name="maxLength">
+           <number>13</number>
+          </property>
+          <property name="readOnly">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLineEdit" name="lEdit_stock_mainPrice"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_17">
+          <property name="text">
+           <string>大件条码：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="1" colspan="11">
+         <widget class="QTableView" name="tableView_stockEntry"/>
+        </item>
+        <item row="7" column="8">
+         <widget class="QPushButton" name="btn_stock_addNew">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>添加(Ctrl+I)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="11">
+         <widget class="QPushButton" name="btn_stock_submit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>提交(Ctrl+S)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="8">
+         <widget class="QPushButton" name="btn_stock_deleteSelected">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>删除选中(Ctrl+D)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLineEdit" name="lEdit_stockName">
+          <property name="readOnly">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLineEdit" name="lEdit_stock_mainSN">
+          <property name="maxLength">
+           <number>13</number>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLabel" name="label_bi_2">
+          <property name="text">
+           <string>小件入库数:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLabel" name="label_bi">
+          <property name="text">
+           <string>大件售价:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="7">
+         <widget class="QLabel" name="label_25">
+          <property name="text">
+           <string>小件条码：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QLabel" name="label_bi_4">
+          <property name="text">
+           <string>大件库存:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QLineEdit" name="lEdit_stock_entryNumber"/>
+        </item>
+        <item row="5" column="3">
+         <widget class="QLabel" name="label_bi_3">
+          <property name="text">
+           <string>小件库存:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="7">
+         <widget class="QLabel" name="label122">
+          <property name="text">
+           <string>供应商:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="2">
+         <widget class="QLineEdit" name="lEdit_stock_entryNumber1"/>
+        </item>
+        <item row="3" column="4">
+         <widget class="QLineEdit" name="lEdit_stock_leftNumber">
+          <property name="readOnly">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_goodsInfo">
+       <attribute name="title">
+        <string>商品信息</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_12">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>宋体</family>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>商品规格:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QPushButton" name="btn_goodsInfoReset">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>重置(Ctrl+R)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QPushButton" name="btn_goodsAddNewInfo">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>添加(Ctrl+I)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0" colspan="4">
+         <widget class="QTableView" name="tableView_goodsInfoView"/>
+        </item>
+        <item row="5" column="0" colspan="2">
+         <layout class="QGridLayout" name="gridLayout_4">
+          <property name="leftMargin">
+           <number>150</number>
+          </property>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="btn_goodsInfoDeleteSelected">
+            <property name="text">
+             <string>删除选中(Ctrl+D)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QPushButton" name="btn_goodsInfoSubmitAll">
+            <property name="text">
+             <string>提交(Ctrl+S)</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0" colspan="3">
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_3">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>商品类型:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lEdit_goodsName">
+            <property name="maxLength">
+             <number>160</number>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="QLineEdit" name="lEdit_goodsCode">
+            <property name="maxLength">
+             <number>13</number>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="font">
+             <font>
+              <family>宋体</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>商品名称:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="cBox_goodsBigUnit"/>
+          </item>
+          <item row="3" column="3">
+           <widget class="QComboBox" name="cBox_goodsSmallUnit"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_8">
+            <property name="font">
+             <font>
+              <family>宋体</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>大件单位:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QLabel" name="label_9">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>小件单位:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="5">
+           <widget class="QLineEdit" name="lEdit_goodsBig2Small"/>
+          </item>
+          <item row="2" column="3">
+           <widget class="QLineEdit" name="lEdit_goodsSmallSN">
+            <property name="maxLength">
+             <number>13</number>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QLabel" name="label_6">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>小件条码:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="lEdit_goodsBigSN">
+            <property name="maxLength">
+             <number>13</number>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QComboBox" name="cBox_goodsType"/>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>商品代码:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_5">
+            <property name="font">
+             <font>
+              <family>宋体</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>大件条码:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="5">
+           <widget class="QLineEdit" name="lEdit_goodsManuf"/>
+          </item>
+          <item row="3" column="5">
+           <widget class="QLineEdit" name="lEdit_goodsOrigPlace"/>
+          </item>
+          <item row="3" column="4">
+           <widget class="QLabel" name="label_11">
+            <property name="text">
+             <string>原产地:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="3">
+           <widget class="QLineEdit" name="lEdit_goodsSmallSellPrice"/>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="lEdit_goodsBigSellPrice"/>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_13">
+            <property name="text">
+             <string>大件售价：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="4">
+           <widget class="QLabel" name="label_10">
+            <property name="text">
+             <string>转换率:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="2">
+           <widget class="QLabel" name="label_14">
+            <property name="text">
+             <string>小件售价:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="4">
+           <widget class="QLabel" name="label_4">
+            <property name="font">
+             <font>
+              <family>宋体</family>
+              <pointsize>11</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>制造商:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="label_15">
+            <property name="text">
+             <string>大件进价:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="lEdit_goodsBigPurchasePrice"/>
+          </item>
+          <item row="5" column="2">
+           <widget class="QLabel" name="label_16">
+            <property name="text">
+             <string>库存数量:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="3">
+           <widget class="QLineEdit" name="lEdit_goodsStockNum"/>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="1" colspan="3">
+         <widget class="QTextEdit" name="tEdit_goodsSpec">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>宋体</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_goodsQuery">
+       <attribute name="title">
+        <string>查询</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="3" column="0" colspan="11">
+         <widget class="QTableView" name="tableView_queryView"/>
+        </item>
+        <item row="4" column="10">
+         <widget class="QPushButton" name="pushButton_8">
+          <property name="text">
+           <string>导出Excel表格</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QComboBox" name="comboBox_query_table">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="9">
+         <widget class="QPushButton" name="btn_query_deleteSelected">
+          <property name="text">
+           <string>删除所选行</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="5">
+         <widget class="QDateEdit" name="dateEdit_query_begin"/>
+        </item>
+        <item row="0" column="6">
+         <widget class="QLabel" name="label_28">
+          <property name="text">
+           <string>终止日期:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLabel" name="label_29">
+          <property name="text">
+           <string>起始日期：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="btn_query_refresh">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>刷新数据</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLabel" name="label_27">
+          <property name="text">
+           <string>名称或条码：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="10">
+         <widget class="QPushButton" name="btn_query_submit">
+          <property name="text">
+           <string>查询</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="5" colspan="5">
+         <widget class="QLineEdit" name="lEdit_query_nameorsn">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="8" colspan="2">
+         <widget class="QDateEdit" name="dateEdit_query_end">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="10">
+         <widget class="QPushButton" name="btn_query_balance_by_date">
+          <property name="text">
+           <string>按日期结算</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="5">
+         <widget class="QPushButton" name="btn_query_balance_today">
+          <property name="text">
+           <string>结算当天</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_personalInfo">
+       <attribute name="title">
+        <string>个人</string>
+       </attribute>
+       <widget class="QWidget" name="formLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>10</y>
+          <width>441</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout">
+         <property name="fieldGrowthPolicy">
+          <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+         </property>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_22">
+           <property name="text">
+            <string>用户名:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lEdit_personal_userName"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_24">
+           <property name="text">
+            <string>新密码：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lEdit_personal_newPasswd">
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_26">
+           <property name="text">
+            <string>确认密码：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="lEdit_personal_confirmPasswd">
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="formLayoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>110</y>
+          <width>161</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout_2">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="pushButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>重置</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="btn_personal_submit">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>提交</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>928</width>
+     <height>17</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
